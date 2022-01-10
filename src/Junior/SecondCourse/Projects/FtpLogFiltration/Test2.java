@@ -2,13 +2,20 @@ package Junior.SecondCourse.Projects.FtpLogFiltration;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class MyTest {
+public class Test2 {
     public static void main(String[] args) {
+        String s = "2021-12-29 06:52:34 connected USER speedy 4455";
+        s.contains("speed");
+        System.out.println(s.contains("speed "));
+
+
+
+
+
+
+
         List<String> textList = new ArrayList<>();
-        List<String> sorted = new ArrayList<>();
         textList.add("2021-12-29 00:02:11 connected 21 USER speed 331");
         textList.add("2021-12-29 06:52:34 connected USER speedy ");
         textList.add("2021-12-29 06:57:11 connected USER speaker");
@@ -19,26 +26,19 @@ public class MyTest {
         textList.add("2021-12-29 00:02:11 connected USER speed 331");
         textList.add("2021-12-29 07:35:45 connected USER speed777 ");
 
-        //игнорирует любую строку если после USER начинается слово на "speed"
-//        Pattern pattern1 = Pattern.compile("USER (?!speed )");
-//        textList.forEach(x -> {
-//            Matcher matcher = pattern1.matcher(x);
-//            while (matcher.find()) {
-//                sorted.add(x);
+        StringBuilder sb = new StringBuilder("speed");
+
+//        textList.forEach(x ->{
+//            if(!x.contentEquals(sb)){
+//                System.out.println(x);
 //            }
 //        });
-//        sorted.forEach(System.out::println);
 
-        textList.forEach(x -> {
-            if(x.contains("USER")){
-                if(!x.contains("speed ")){
-                    sorted.add(x);
-                }
-            }
-        });
-        sorted.forEach(System.out::println);
+            textList.forEach(x ->{
+                //System.out.println(x.contains("speed"));
+            });
+
+
 
     }
 }
-
-
