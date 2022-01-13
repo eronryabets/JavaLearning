@@ -26,7 +26,7 @@ public abstract class Person<T extends Person> {
         }
     }
 
-    public StringBuilder getName() {
+        public StringBuilder getName() {
         StringBuilder n = name;
         return n;
     }
