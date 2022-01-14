@@ -20,23 +20,24 @@ public class MyTest {
         textList.add("2021-12-29 07:35:45 connected USER speed777 ");
 
         //игнорирует любую строку если после USER начинается слово на "speed"
-//        Pattern pattern1 = Pattern.compile("USER (?!speed )");
-//        textList.forEach(x -> {
-//            Matcher matcher = pattern1.matcher(x);
-//            while (matcher.find()) {
-//                sorted.add(x);
-//            }
-//        });
-//        sorted.forEach(System.out::println);
-
+        Pattern pattern1 = Pattern.compile("USER (?!speed )");
         textList.forEach(x -> {
-            if(x.contains("USER")){
-                if(!x.contains("speed ")){
-                    sorted.add(x);
-                }
+            Matcher matcher = pattern1.matcher(x);
+            while (matcher.find()) {
+                sorted.add(x);
             }
         });
         sorted.forEach(System.out::println);
+
+        //без regex
+//        textList.forEach(x -> {
+//            if(x.contains("USER")){
+//                if(!x.contains("speed ")){
+//                    sorted.add(x);
+//                }
+//            }
+//        });
+//        sorted.forEach(System.out::println);
 
     }
 }
