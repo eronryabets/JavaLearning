@@ -17,6 +17,7 @@ public class LogFilter {
                 Matcher matcher = pattern.matcher(line);
                 while (matcher.find()) {
                     writer.write(line);
+                    writer.write("\n");
                 }
             }
         } catch (FileNotFoundException e) {
