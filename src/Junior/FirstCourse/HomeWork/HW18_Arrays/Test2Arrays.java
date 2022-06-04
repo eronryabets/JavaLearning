@@ -1,5 +1,5 @@
 package Junior.FirstCourse.HomeWork.HW18_Arrays;
-//ДОДЕЛАТЬ КАК В ДЗ, С КРАСИВЫМ ВЫВОДОМ
+//ДОДЕЛАТЬ КАК В ДЗ, С КРАСИВЫМ ВЫВОДОМ - DONE
 
 public class Test2Arrays {
 
